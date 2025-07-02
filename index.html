@@ -8,6 +8,7 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="calmchatbot.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -508,6 +509,26 @@
 				</div>
 			</div>
 		</div>
+		<div class="chatBot">
+			<header>
+				<h2>ChatBot</h2>
+				<span alt="Close"
+					  id="cross"
+					  onclick="cancel()">X</span>
+			</header>
+			<ul class="chatbox">
+				<li class="chat-incoming chat">
+					<p>hey! hope you are feeling better.
+					<p>How can I assist you today?</p>
+				</li>
+			</ul>
+			<div class="chat-input">
+				<textarea rows="0" cols="17"
+						  placeholder="Enter a message..."></textarea>
+				<button id="sendBTN">Send</button>
+			</div>
+		</div>
+		<script src="chatbot.js" defer></script>
 		<footer>
 			<p>&copy; 2024 CalmConnect. All rights reserved.</p>
 		</footer>
