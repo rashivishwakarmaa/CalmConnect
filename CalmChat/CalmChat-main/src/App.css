@@ -1,0 +1,268 @@
+/* Hero - full-screen background with centered silhouette */
+.hero-section {
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #667eea;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 40%, transparent 70%),
+    url('/assets/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: 65% 50%;
+  background-size: cover;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 40%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .lead {
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Cards - enhanced from original */
+.card-d {
+  min-height: 220px;
+  border-radius: 24px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+}
+
+/* Page section styling */
+.page-section {
+  padding: 3rem 0;
+}
+
+/* About page - two-column layout like original */
+.about-page .about-image-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.about-page .lead {
+  font-size: 1.25rem;
+}
+
+.about-page h2 {
+  font-weight: 700;
+  color: #333;
+}
+
+.about-page h3 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+/* Contact - specialist cards */
+.contact-card {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.12);
+}
+
+/* Login */
+.login-page {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.login-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.login-body {
+  padding: 40px;
+  background: #fff;
+}
+
+.btn-login {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-1px);
+}
+
+.register-link .btn-link {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+}
+
+.register-link .btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Appointments */
+.appointment-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+}
+
+.appointment-card {
+  border-radius: 15px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.btn-book {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+}
+
+.btn-book:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-1px);
+}
+
+.btn-view-appointments {
+  font-weight: 600;
+  padding: 10px 24px;
+}
+
+.btn-view-appointments:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* My Appointments page */
+.my-appointments-page .page-title {
+  font-weight: 700;
+  color: #333;
+}
+
+.appointments-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.appointment-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15) !important;
+}
+
+.appointment-card .appointment-id {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.appointment-card .appointment-doctor {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.appointment-card .detail-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+.appointment-card .detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.appointment-card .detail-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+  margin-bottom: 0.2rem;
+}
+
+.appointment-card .detail-value {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.appointment-card .status-badge {
+  font-size: 0.7rem;
+  padding: 0.35em 0.65em;
+  font-weight: 600;
+}
+
+.status-confirmed {
+  background: rgba(25, 135, 84, 0.15);
+  color: #198754;
+}
+
+.status-pending {
+  background: rgba(255, 193, 7, 0.25);
+  color: #856404;
+}
+
+.status-cancelled {
+  background: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+}
+
+.appointments-empty .empty-icon {
+  font-size: 3rem;
+  opacity: 0.7;
+}
+
+.appointments-loading .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
