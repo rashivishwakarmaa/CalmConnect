@@ -1,0 +1,48 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-calm {
+  background: #fff !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-calm .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar-calm .nav-link:hover {
+  color: #667eea !important;
+}
+
+.navbar-calm .nav-link.active {
+  color: #667eea !important;
+  font-weight: 600;
+}
+
+.navbar-calm .navbar-brand img {
+  height: 32px;
+  width: auto;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.footer-calm {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 0.95rem;
+  margin-top: auto;
+}
+
+.footer-calm p {
+  margin: 0;
+}
